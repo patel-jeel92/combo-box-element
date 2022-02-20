@@ -10,7 +10,13 @@
 <body>
     <h1>Combo Box</h1>
 
-    <combo-box></combo-box>
+    <combo-box id="combo-box" placeholder="Choose a fruit:"></combo-box>
+    <script type="text/javascript">
+        let comboBox = document.getElementById('combo-box')
+        comboBox.items = ["&#127822 Apple", "&#127820 Banana", "&#127817 Watermelon", "&#127815 Grape", "&#127818 Orange", "&#127821 Pineapple", "&#127827 Strawberry", "&#127826 Cherry"
+        ];
+
+    </script>
     <script type="text/javascript" src="./combo-box.js"></script>
 </body>
 
