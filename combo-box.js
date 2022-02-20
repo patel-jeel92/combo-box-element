@@ -22,14 +22,15 @@ class ComboBox extends HTMLElement {
     </style>
     <input list="fruits" id="fruit-choice" name="fruit-choice" placeholder="Choose a Fruit:" />
     <datalist id="fruits">
-        <option value="Apple"></option>
-        <option value="Banana"></option>
-        <option value="Blueberry"></option>
-        <option value="Mango"></option>
-        <option value="Watermelon"></option>
-        <option value="Grape"></option>
-        <option value="Orange"></option>
-        <option value="Pineapple"></option>
+        <option value="&#127822 Apple"></option>
+        <option value="&#127820 Banana"></option>
+        <option value="&#127817 Watermelon"></option>
+        <option value="&#127815 Grape"></option>
+        <option value="&#127818 Orange"></option>
+        <option value="&#127821 Pineapple"></option>
+        <option value="&#127827 Strawberry"></option>
+        <option value="&#127826 Cherry"></option>
+        
     </datalist>
     `;
     shadow.appendChild(template);
