@@ -11,12 +11,16 @@
     <h1>Combo Box</h1>
 
     <combo-box id="combo-box" placeholder="Choose a fruit:"></combo-box>
+
     <script type="text/javascript">
+        // NOTE: Have to use setters to pass in 
+        //  data in a sane manner: https://itnext.io/handling-data-with-web-components-9e7e4a452e6e
         let comboBox = document.getElementById('combo-box')
-        comboBox.items = ["&#127822 Apple", "&#127820 Banana", "&#127817 Watermelon", "&#127815 Grape", "&#127818 Orange", "&#127821 Pineapple", "&#127827 Strawberry", "&#127826 Cherry"
+        comboBox.items = [{ display: "&#127822 Apple", value: "Apple" }, { display: "&#127820 Banana", value: "Banana" }, { display: "&#127817 Watermelon", value: "Watermelon" }, { display: "&#127815 Grape", value: "Grape" }, { display: "&#127818 Orange", value: "Orange" }, { display: "&#127821 Pineapple", value: "Pineapple" }, { display: "&#127827 Strawberry", value: "Strawberry" }, { display: "&#127826 Cherry", value: "Cherry" }
         ];
 
     </script>
+    <!--- Bring in our custom element -->
     <script type="text/javascript" src="./combo-box.js"></script>
 </body>
 

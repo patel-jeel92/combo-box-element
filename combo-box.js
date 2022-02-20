@@ -11,6 +11,10 @@ class ComboBox extends HTMLElement {
     const listItems = this.items;
 
     // add html to the template
+    // NOTE: Currently in Chrome and Opera, using dataList element will show the value and the text in drop-down.
+    //  There are ways to get around this using some logic.
+    //  The main thing is we are emitting the value instead of whats displayed so users can hit backspace and continue to filter
+    //  https://stackoverflow.com/questions/29882361/show-datalist-labels-but-submit-the-actual-value
     template.innerHTML = `
     <style>
         input::-webkit-calendar-picker-indicator {
@@ -24,14 +28,14 @@ class ComboBox extends HTMLElement {
             border-radius: 5px;
         }    
     </style>
-    <input list="custom-items" name="combo-box" placeholder="${
+    <input class="search-field" list="custom-items" name="combo-box" placeholder="${
       this.placeholder
     }" />
     <datalist id="custom-items">
     ${listItems
       .map(
         (item) => `
-        <option value="${item}">${item}</option>
+        <option value=${item.value}>${item.display}</option>
         `
       )
       .join("")}
